@@ -1,0 +1,3 @@
+- Run `npm install`
+- Run `npx react-native start` to start Metro
+- Run `npx react-native run-android` in a new terminal

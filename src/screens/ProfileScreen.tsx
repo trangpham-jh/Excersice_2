@@ -1,17 +1,17 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
-import {TextInput, TouchableHighlight} from 'react-native-gesture-handler';
+import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native';
+import { TextInput, TouchableHighlight } from 'react-native-gesture-handler';
 import COLORS from '../consts/colors';
 
-const ProfileScreen = ({navigation}) => {
+const ProfileScreen = ({ navigation }) => {
   return (
-    <SafeAreaView style={{flex: 1, backgroundColor: COLORS.white}}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.white }}>
       <View style={styles.header}>
-        <View style={{position: 'relative'}}>
+        <View style={{ position: 'relative' }}>
           <Image
             source={require('../assets/avatar.jpeg')}
-            style={{height: 100, width: 100, borderRadius: 25}}
+            style={{ height: 100, width: 100, borderRadius: 25 }}
           />
           <Image
             source={require('../assets/icons/add-photo.png')}
@@ -26,27 +26,27 @@ const ProfileScreen = ({navigation}) => {
           />
         </View>
       </View>
-      <View style={{marginHorizontal: 20}}>
-        <View style={{flexDirection: 'row', marginTop: 40}}>
+      <View style={{ marginHorizontal: 20 }}>
+        <View style={{ flexDirection: 'row', marginTop: 40 }}>
           <TextInput
             placeholderTextColor={COLORS.grey}
-            style={{...styles.field, flex: 1, marginRight: 15}}
+            style={{ ...styles.field, flex: 1, marginRight: 15 }}
             placeholder="First name"
           />
           <TextInput
             placeholderTextColor={COLORS.grey}
-            style={{...styles.field, flex: 1}}
+            style={{ ...styles.field, flex: 1 }}
             placeholder="Last name"
           />
         </View>
         <TextInput
           placeholderTextColor={COLORS.grey}
-          style={{...styles.field, marginVertical: 20}}
+          style={{ ...styles.field, marginVertical: 20 }}
           placeholder="Phone"
         />
         <TextInput
           placeholderTextColor={COLORS.grey}
-          style={{...styles.field}}
+          style={{ ...styles.field }}
           placeholder="Email"
         />
         <Text

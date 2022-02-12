@@ -1,14 +1,19 @@
 /* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {StyleSheet, View, Text, Image} from 'react-native';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import COLORS from '../consts/colors';
+import messages from '../consts/messages';
 
-const InboxCard = ({item}) => {
+type InboxCardProps = {
+  item: typeof messages[number];
+};
+
+const InboxCard = ({ item }: InboxCardProps) => {
   return (
     <View style={style.inboxCard}>
       <Image
         source={item.image}
-        style={{height: 50, width: 50, borderRadius: 50}}
+        style={{ height: 50, width: 50, borderRadius: 50 }}
       />
       <View
         style={{
@@ -17,10 +22,10 @@ const InboxCard = ({item}) => {
           paddingVertical: 20,
           flex: 1,
         }}>
-        <Text style={{color: COLORS.dark, fontWeight: 'bold', fontSize: 16}}>
+        <Text style={{ color: COLORS.dark, fontWeight: 'bold', fontSize: 16 }}>
           {item.name}
         </Text>
-        <Text style={{fontSize: 13, color: COLORS.grey}}>{item.message}</Text>
+        <Text style={{ fontSize: 13, color: COLORS.grey }}>{item.message}</Text>
       </View>
     </View>
   );

@@ -1,2 +1,1 @@
-export * from './FilmCard'
-export * from './InboxCard'
+export * from './InboxCard';
